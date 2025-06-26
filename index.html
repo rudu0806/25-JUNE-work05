@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mobile shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top social bar -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <span>🔵</span>
+      <span>❌</span>
+      <span>🔗</span>
+      <span>🟢</span>
+    </div>
+    <div class="store-link">Shoping in online</div>
+  </div>
+
+  <!-- Main header -->
+  <header class="main-header">
+    <div class="left">
+      <span class="menu-icon">☰ MENU</span>
+    </div>
+  <div class="center-header">
+  <img src="https://i.pinimg.com/736x/a2/63/16/a263166a47cd7ab2782ea79733ce523d.jpg" class="logo-icon" alt="logo" />
+  <span class="logo-text">mobile shop</span>
+</div>
+    <div class="right">
+      <span class="cart-icon">🛍️<span class="cart-count">0</span></span>
+    </div>
+  </header>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      padding-bottom: 70px; /* Space for bottom menu */
+    }
+
+    .search-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      background-color: #f2f2f2;
+    }
+
+    .search-section input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+    }
+
+    .search-section button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+    }
+
+   .product-card button {
+      background: linear-gradient(135deg, #28a745, #218838);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.3);
+      transition: 0.4s;
+    }
+
+    .product-card button:hover::after {
+      left: 100%;
+    }
+
+    .product-card button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+    }
+
+    /* Bottom Menu */
+    .bottom-menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+      color: #333;
+      position: relative;
+    }
+
+    .icon {
+      font-size: 22px;
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 10px;
+    }
+
+    .menu-item p {
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-section">
+    <input type="text" placeholder="Search for products">
+    <button>🔍</button>
+  </div>
+<div class="product-section">
+  <h2>Phones</h2>
+
+  <div class="product-card">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQZaWjwSbslsRLfIN72BF6pBm4jFWZTBQLTUsIVW979ZfeL7UQVJP44F22loa0f9w1-Rr5FYPTSM1Snc4KT1uBRdfVUDPRWqWzBYdUfTiQS7JL9NtQVFL4-VGRye2DlWrz7ZeOXz6hYjBY&usqp=CAc" alt="Phone 1">
+    <h3>iPhone 14</h3>
+    <p>₹79,999</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ1h7jxJbk3To37hkEsLpVDwUM5_hp6On-oRoqXzaXDrlUvw5abAgjJAQRt5Qx8zuVRNx_iJQa_ASggwTgtXloDblqzIarzXzcCVI8aRhE15Yhn07kYCOdtNpMOVs0JKE2XBrna6pmnmg&usqp=CAc" alt="Phone 2">
+    <h3>Samsung Galaxy S23</h3>
+    <p>₹69,999</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSMev2pcHlerHsRIWOMRK0k0D1rKVcdviNOssEhM1hMiCDsz7oq_aoSVZ5Xf52aHjI6FuBtzEAOCC6j90rcnM7ub0MjNVPjnLoUYQQqu5VhPLpnrgNCTEt2xA4WMj09&usqp=CAc alt="Phone 3>
+    <h3>OnePlus 12</h3>
+    <p>₹59,999</p>
+    <button>Add to Cart</button>
+  </div>
+    <div class="product-card">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSLpYFadN6IiR-N3RW4bhPM357_V9gDhNFhRLxjjQkdRu0nQ9uClmeaUsskHQiYkkYkFv-H5XRd32FWU1ibcwyHigW_ylRewr29ow_Usu9AjUwJAY9rGocMPO0PoeRhEEGmTLs7QQpIECk&usqp=CAc"Phone 4>
+    <h3>iPhone 15 plus</h3>
+    <p>₹69,999</p>
+    <button>Add to Cart</button>
+  </div>
+</div>
+    <div class="product-card">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSLi_q9a3k2Q9JEJBMs9RTFGvl37-X6iUlEjCdg8TloyuD7Yd6w_03QgoK0A79X7rjmOi-3V73wiyFXnvdKqNYPTGhqvTky2I98rQYND6F1VdS0zzS99wYwc0wyyjn56H5TEs4yDQ&usqp=CAc"Phone 5>
+    <h3>Samsung Galaxy s24 Ultra </h3>
+    <p>₹84,999</p>
+    <button>Add to Cart</button>
+  </div>
+</div>
+  <div class="bottom-menu">
+    <div class="menu-item">
+      <span class="icon">🏪</span>
+      <p>Shop</p>
+    </div>
+    <div class="menu-item">
+      <span class="icon">
+        🤍
+        <span class="badge">0</span>
+      </span>
+      <p>Wishlist</p>
+    </div>
+    <div class="menu-item">
+      <span class="icon">
+        🛍️
+        <span class="badge">0</span>
+      </span>
+      <p>Cart</p>
+    </div>
+    <div class="menu-item">
+      <span class="icon">👤</span>
+      <p>My account</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+</body>
+</html>
